@@ -1,9 +1,13 @@
 import { After, Before, setDefaultTimeout, setWorldConstructor, World, IWorldOptions } from '@cucumber/cucumber';
 import { Browser, BrowserContext, chromium, Page } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
 import { LoginPage } from '../pages/LoginPage';
 import { CreateNewEmployeePage } from '../pages/CreateNewEmployeePage';
 import { ViewEditEmployeeDetailsPage } from '../pages/ViewEditEmployeeDetailsPage';
 import { DeleteEmployeePage } from '../pages/DeleteEmployeePage';
+
+const screenshotDir = path.join(process.cwd(), 'reports', 'screenshots');
 
 export class CustomWorld extends World {
   browser!: Browser;
@@ -41,6 +45,13 @@ Before(async function (this: CustomWorld) {
   await this.openBrowser();
 });
 
-After(async function (this: CustomWorld) {
+After(async function (this: CustomWorld, scenario) {
+  if (scenario.result?.status === 'FAILED') {
+    fs.mkdirSync(screenshotDir, { recursive: true });
+    const fileName = `${scenario.pickle.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.png`;
+    const screenshotPath = path.join(screenshotDir, fileName);
+    await this.page.screenshot({ path: screenshotPath, fullPage: true });
+  }
+
   await this.closeBrowser();
 });
