@@ -1,3 +1,4 @@
+@delete-employee
 Feature: Delete employee
 
   Scenario: User can delete an employee

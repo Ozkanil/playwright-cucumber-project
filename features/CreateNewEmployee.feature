@@ -1,3 +1,4 @@
+@create-employee
 Feature: Create new employee
 This test case creates an employeee with unique employee ID 
 and verifies that the employee is created successfully. Then,

@@ -1,3 +1,4 @@
+@view-edit-employee
 Feature: View and edit employee details
 
   Scenario: User can view and edit employee details
