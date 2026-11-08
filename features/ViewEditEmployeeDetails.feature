@@ -13,3 +13,10 @@ Feature: View and edit employee details
     Then the employee details should be displayed
     When I edit and save the employee details
     Then the employee details should be updated successfully
+
+  Scenario: User cannot view any employee details when searched with non existent employee ID
+    Given I open the OrangeHRM homepage
+    And I login with valid credentials
+    And I open the PIM page
+    When I search for the employee by ID    
+    Then the employee details cannot be fetched as the employee does not exist

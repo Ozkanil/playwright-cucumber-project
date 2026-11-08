@@ -1,6 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { EMPLOYEE_DATA } from '../test-data/employee';
-import { expectSuccessToast } from '../utils/expectations';
+import { expectSuccessToast, expectInfoToast } from '../utils/expectations';
 
 export class CreateNewEmployeePage {
   readonly page: Page;
@@ -85,5 +85,10 @@ export class CreateNewEmployeePage {
   async clickFoundEmployeeToViewTheDetails(): Promise<void> {
     const employeeRow = this.employeeTableResultRow.filter({ hasText: EMPLOYEE_DATA.employeeId }).first();
     await employeeRow.click();
+  }
+
+  async expectNoEmployeeFound(): Promise<void> {
+    const infoToast = this.page.locator('.oxd-toast.oxd-toast--info');
+    await expectInfoToast(infoToast);
   }
 }

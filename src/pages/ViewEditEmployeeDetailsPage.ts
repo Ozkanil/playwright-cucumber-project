@@ -1,6 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { EMPLOYEE_DATA } from '../test-data/employee';
-import { expectSuccessToast } from '../utils/expectations';
+import { expectSuccessToast, expectInfoToast } from '../utils/expectations';
 
 export class ViewEditEmployeeDetailsPage {
   readonly page: Page;
@@ -10,6 +10,7 @@ export class ViewEditEmployeeDetailsPage {
   readonly employeeDetailsForm: Locator;
   readonly saveButton: Locator;
   readonly successToast: Locator;
+  readonly infoToast: Locator;
   readonly editEmployeeButton: Locator;
   readonly maritalStatusField: Locator;
   readonly maritalStatusDropdown: Locator;
@@ -31,6 +32,7 @@ export class ViewEditEmployeeDetailsPage {
     this.editEmployeeButton = page.locator('button.oxd-icon-button.oxd-table-cell-action-space').first();
     this.saveButton = this.employeeDetailsForm.getByRole('button', { name: 'Save' }).first();
     this.successToast = page.locator('.oxd-toast.oxd-toast--success');
+    this.infoToast = page.locator('.oxd-toast.oxd-toast--info');
     this.maritalStatusField = page
       .locator('.oxd-input-group')
       .filter({ has: page.locator('label').filter({ hasText: 'Marital Status' }) })
@@ -83,5 +85,9 @@ export class ViewEditEmployeeDetailsPage {
     await expect(this.firstNameInput).toHaveValue('Jane', { timeout: 10000 });
     await expect(this.lastNameInput).toHaveValue('Smith', { timeout: 10000 });
     await expect(this.maritalStatusField).toContainText('Married', { timeout: 10000 });
+  }
+
+  async expectEmployeeDetailsNotFound(): Promise<void> {
+    await expectInfoToast(this.infoToast);
   }
 }

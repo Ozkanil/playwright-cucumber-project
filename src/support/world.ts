@@ -3,6 +3,7 @@ import { Browser, BrowserContext, chromium, Page } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { CreateNewEmployeePage } from '../pages/CreateNewEmployeePage';
 import { ViewEditEmployeeDetailsPage } from '../pages/ViewEditEmployeeDetailsPage';
+import { DeleteEmployeePage } from '../pages/DeleteEmployeePage';
 
 export class CustomWorld extends World {
   browser!: Browser;
@@ -11,6 +12,7 @@ export class CustomWorld extends World {
   loginPage!: LoginPage;
   declare employeePage: CreateNewEmployeePage;
   declare viewEditEmployeeDetailsPage: ViewEditEmployeeDetailsPage;
+  declare deleteEmployeePage: DeleteEmployeePage;
 
   constructor(options: IWorldOptions) {
     super(options);
@@ -23,6 +25,7 @@ export class CustomWorld extends World {
     this.loginPage = new LoginPage(this.page);
     this.employeePage = new CreateNewEmployeePage(this.page);
     this.viewEditEmployeeDetailsPage = new ViewEditEmployeeDetailsPage(this.page);
+    this.deleteEmployeePage = new DeleteEmployeePage(this.page);
   }
 
   async closeBrowser() {
