@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "cucumber-js --require-module ts-node/register --require src/support/**/*.ts --require src/steps/**/*.ts --format progress"
+    "test": "cucumber-js --require-module ts-node/register --require src/support/**/*.ts --require src/steps/**/*.ts --format progress",
+    "test:json": "mkdir -p reports && cucumber-js --require-module ts-node/register --require src/support/**/*.ts --require src/steps/**/*.ts --format json:reports/cucumber-report.json",
+    "test:html": "mkdir -p reports && npx cucumber-js --require-module ts-node/register --require src/support/**/*.ts --require src/steps/**/*.ts --format json:reports/cucumber-report.json; node reporter.js"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^11.0.0",
