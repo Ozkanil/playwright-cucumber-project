@@ -186,3 +186,25 @@ You can also combine parallel mode with tags:
 npx cucumber-js --parallel 4 --tags "@smoke"
 ```
 
+## Browser execution settings
+
+To run the tests in headless mode, set the browser launch option to `true` in `src/support/world.ts`:
+
+```ts
+this.browser = await chromium.launch({ headless: true, slowMo: 400 });
+```
+
+To make the test execution slower and easier to observe, increase the `slowMo` value:
+
+## Screenshots on failure
+
+If a scenario fails, the project automatically creates a screenshot under `reports/screenshots/`.
+
+This is handled in `src/support/world.ts` during the `After` hook, and the folder is created if it does not already exist:
+
+```ts
+fs.mkdirSync(screenshotDir, { recursive: true });
+```
+
+The screenshot name is based on the scenario name for easier debugging.
+

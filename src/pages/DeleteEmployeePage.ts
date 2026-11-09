@@ -1,5 +1,4 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { EMPLOYEE_DATA } from '../test-data/employee';
 import { expectSuccessToast } from '../utils/expectations';
 
 export class DeleteEmployeePage {
@@ -17,10 +16,10 @@ export class DeleteEmployeePage {
     this.successToast = page.locator('.oxd-toast.oxd-toast--success');
   }
 
-  async clickDeleteButton(): Promise<void> {
+  async clickDeleteButton(employeeId: string): Promise<void> {
     const employeeRow = this.page
       .locator('.oxd-table-card, .oxd-table-row')
-      .filter({ hasText: EMPLOYEE_DATA.employeeId })
+      .filter({ hasText: employeeId })
       .first();
 
     await employeeRow.waitFor({ state: 'visible', timeout: 15000 });

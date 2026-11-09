@@ -1,3 +1,5 @@
+//Reusable assertion methods for toast messages.
+
 import { expect, Locator } from '@playwright/test';
 
 export async function expectSuccessToast(locator: Locator, action: 'Saved' | 'Updated' | 'Deleted' = 'Saved'): Promise<void> {

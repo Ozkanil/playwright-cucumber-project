@@ -6,7 +6,7 @@
         "description": "",
         "id": "create-new-employee;user-can-create-a-new-employee",
         "keyword": "Scenario",
-        "line": 7,
+        "line": 8,
         "name": "User can create a new employee",
         "steps": [
           {
@@ -14,137 +14,137 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 834594832
+              "duration": 696519332
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
+            "line": 9,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1148072458
+              "duration": 835426624
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 9,
+            "line": 10,
             "name": "I login with valid credentials",
             "match": {
               "location": "src/steps/Login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2287110832
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "I open the PIM page",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:3"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1124109625
+              "duration": 1396168167
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "I click the Add button",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 744114708
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I fill in employee details",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1256063417
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "I save the employee details",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 437109875
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the employee should be created",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4157104582
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
             "name": "I open the PIM page",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 951578457
+              "duration": 1123730208
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
+            "line": 12,
+            "name": "I click the Add button",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 914831124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I fill in employee details",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 256161875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I save the employee details",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 361726291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the employee should be created",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4921145832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
             "line": 16,
+            "name": "I open the PIM page",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 621457250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
             "name": "I search for the employee by ID",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 889151166
+              "duration": 330577750
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
+            "line": 18,
             "name": "the employee should be visible in the results",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 22875166
+              "duration": 882072875
             }
           },
           {
@@ -152,29 +152,39 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140582250
+              "duration": 136249208
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@create-employee",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "create-new-employee",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "Create new employee",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@create-employee",
+        "line": 1
+      }
+    ],
     "uri": "features/CreateNewEmployee.feature"
   },
   {
-    "description": "",
+    "description": "First creates an employee as a test data. Then, searches for the employee by ID and deletes the employee. \nFinally, searches for the employee by ID again and verifies that the employee is not found.",
     "elements": [
       {
         "description": "",
         "id": "delete-employee;user-can-delete-an-employee",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 6,
         "name": "User can delete an employee",
         "steps": [
           {
@@ -182,163 +192,176 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 535284082
+              "duration": 593568541
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 7,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1179539625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 5,
-            "name": "I login with valid credentials",
-            "match": {
-              "location": "src/steps/Login.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2190898000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I open the PIM page",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:3"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1148916583
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "I click the Add button",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 752105457
+              "duration": 776021042
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "I fill in employee details",
+            "name": "I login with valid credentials",
             "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:11"
+              "location": "src/steps/Login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1259402875
+              "duration": 1085487666
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I save the employee details",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 440026915
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
             "name": "I open the PIM page",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1007382375
+              "duration": 1308144624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click the Add button",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 701213541
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
+            "name": "I fill in employee details",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 245306917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I save the employee details",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 346665709
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the employee should be created",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4854351707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I open the PIM page",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595582875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
             "name": "I search for the employee by ID",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 882342291
+              "duration": 276949542
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
+            "line": 16,
             "name": "I click on the delete button",
             "match": {
               "location": "src/steps/DeleteEmployee.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 885773291
+              "duration": 857585417
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 17,
             "name": "the employee should be deleted successfully",
             "match": {
               "location": "src/steps/DeleteEmployee.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 6786167
+              "duration": 359800583
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 14,
+            "line": 18,
             "name": "I search for the employee by ID",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 843457791
+              "duration": 53800582
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
+            "line": 19,
             "name": "the employee details cannot be fetched as the employee does not exist",
             "match": {
               "location": "src/steps/ViewEditEmployeeDetails.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 9364624
+              "duration": 363547375
             }
           },
           {
@@ -346,19 +369,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140855125
+              "duration": 137056625
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@delete-employee",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "delete-employee",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "Delete employee",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@delete-employee",
+        "line": 1
+      }
+    ],
     "uri": "features/DeleteEmployee.feature"
   },
   {
@@ -368,7 +401,7 @@
         "description": "",
         "id": "login;login-with-valid-credentials-succeeds",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 4,
         "name": "Login with valid credentials succeeds",
         "steps": [
           {
@@ -376,46 +409,46 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 565587665
+              "duration": 564108541
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1247532250
+              "duration": 765315249
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
+            "line": 6,
             "name": "I login with valid credentials",
             "match": {
               "location": "src/steps/Login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2255533249
+              "duration": 1035099625
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
+            "line": 7,
             "name": "the page should show Dashboard",
             "match": {
               "location": "src/steps/Login.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 11156291
+              "duration": 384094083
             }
           },
           {
@@ -423,65 +456,70 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 118257958
+              "duration": 113782124
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "login;login-with-invalid-credentials",
+        "id": "login;login-with-invalid-credentials-fails",
         "keyword": "Scenario Outline",
-        "line": 15,
-        "name": "Login with invalid credentials",
+        "line": 16,
+        "name": "Login with invalid credentials fails",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 560744666
+              "duration": 573344082
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
+            "line": 10,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1261967207
+              "duration": 1026660083
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 11,
             "name": "I login with \"invaliduser\" and \"invalidpass\"",
             "match": {
               "location": "src/steps/Login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1791793541
+              "duration": 733030875
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 12,
             "name": "I should see the error message \"Invalid credentials\"",
             "match": {
               "location": "src/steps/Login.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 19949875
+              "duration": 389451541
             }
           },
           {
@@ -489,65 +527,70 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 101718250
+              "duration": 123596124
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "login;login-with-invalid-credentials",
+        "id": "login;login-with-invalid-credentials-fails",
         "keyword": "Scenario Outline",
-        "line": 16,
-        "name": "Login with invalid credentials",
+        "line": 17,
+        "name": "Login with invalid credentials fails",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 578173583
+              "duration": 666573292
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
+            "line": 10,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1193816666
+              "duration": 794603624
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 11,
             "name": "I login with \"Admin\" and \"wrongpass\"",
             "match": {
               "location": "src/steps/Login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 2035988208
+              "duration": 1015397541
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 12,
             "name": "I should see the error message \"Invalid credentials\"",
             "match": {
               "location": "src/steps/Login.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 19068667
+              "duration": 387577207
             }
           },
           {
@@ -555,65 +598,70 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 114343667
+              "duration": 124159832
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "login;login-with-invalid-credentials",
+        "id": "login;login-with-invalid-credentials-fails",
         "keyword": "Scenario Outline",
-        "line": 17,
-        "name": "Login with invalid credentials",
+        "line": 18,
+        "name": "Login with invalid credentials fails",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 650237666
+              "duration": 603319625
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
+            "line": 10,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1281080916
+              "duration": 859667416
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 11,
             "name": "I login with \"wronguser\" and \"admin123\"",
             "match": {
               "location": "src/steps/Login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1789873457
+              "duration": 743625499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 12,
             "name": "I should see the error message \"Invalid credentials\"",
             "match": {
               "location": "src/steps/Login.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 20577583
+              "duration": 390517249
             }
           },
           {
@@ -621,65 +669,70 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 117331166
+              "duration": 127001624
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "login;login-with-missing-username-or-password",
+        "id": "login;login-with-missing-username-or-password-fails",
         "keyword": "Scenario Outline",
-        "line": 26,
-        "name": "Login with missing username or password",
+        "line": 27,
+        "name": "Login with missing username or password fails",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 644579042
+              "duration": 535706499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 20,
+            "line": 21,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1175997500
+              "duration": 803963624
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
+            "line": 22,
             "name": "I login with \"\" and \"admin123\"",
             "match": {
               "location": "src/steps/Login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1336935041
+              "duration": 291340250
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
+            "line": 23,
             "name": "I should see the required message for \"username\"",
             "match": {
               "location": "src/steps/Login.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 3193042
+              "duration": 4185417
             }
           },
           {
@@ -687,65 +740,70 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 105917541
+              "duration": 106220374
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "login;login-with-missing-username-or-password",
+        "id": "login;login-with-missing-username-or-password-fails",
         "keyword": "Scenario Outline",
-        "line": 27,
-        "name": "Login with missing username or password",
+        "line": 28,
+        "name": "Login with missing username or password fails",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 637582541
+              "duration": 547880875
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 20,
+            "line": 21,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1164579042
+              "duration": 781415457
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
+            "line": 22,
             "name": "I login with \"Admin\" and \"\"",
             "match": {
               "location": "src/steps/Login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1327919375
+              "duration": 297925209
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
+            "line": 23,
             "name": "I should see the required message for \"password\"",
             "match": {
               "location": "src/steps/Login.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 10650082
+              "duration": 2192208
             }
           },
           {
@@ -753,19 +811,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 127694540
+              "duration": 103964584
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "login",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "Login",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
     "uri": "features/Login.feature"
   },
   {
@@ -775,7 +843,7 @@
         "description": "",
         "id": "view-and-edit-employee-details;user-can-view-and-edit-employee-details",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 4,
         "name": "User can view and edit employee details",
         "steps": [
           {
@@ -783,163 +851,176 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 568195208
+              "duration": 630556374
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1172701874
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 5,
-            "name": "I login with valid credentials",
-            "match": {
-              "location": "src/steps/Login.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2197822375
+              "duration": 721890542
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 6,
-            "name": "I open the PIM page",
+            "name": "I login with valid credentials",
             "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:3"
+              "location": "src/steps/Login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1097579208
+              "duration": 1084383540
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 7,
-            "name": "I click the Add button",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 753893958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I fill in employee details",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1246554457
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "I save the employee details",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 439480750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
             "name": "I open the PIM page",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 944257542
+              "duration": 1412349875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the Add button",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 771227874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I fill in employee details",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 828379125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I save the employee details",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33124167
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
+            "name": "the employee should be created",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4845307333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I open the PIM page",
+            "match": {
+              "location": "src/steps/CreateNewEmployee.steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 523518292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
             "name": "I search for the employee by ID",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 860446541
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "I click on the found employee to view details",
-            "match": {
-              "location": "src/steps/CreateNewEmployee.steps.ts:31"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 874646540
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "the employee details should be displayed",
-            "match": {
-              "location": "src/steps/ViewEditEmployeeDetails.steps.ts:3"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 386397083
+              "duration": 259182457
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 14,
-            "name": "I edit and save the employee details",
+            "name": "I click on the found employee to view details",
             "match": {
-              "location": "src/steps/ViewEditEmployeeDetails.steps.ts:7"
+              "location": "src/steps/CreateNewEmployee.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2987823499
+              "duration": 1348946417
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 15,
+            "name": "the employee details should be displayed",
+            "match": {
+              "location": "src/steps/ViewEditEmployeeDetails.steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 886134499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I edit and save the employee first name last name and marital status",
+            "match": {
+              "location": "src/steps/ViewEditEmployeeDetails.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125011958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
             "name": "the employee details should be updated successfully",
             "match": {
               "location": "src/steps/ViewEditEmployeeDetails.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 19368042
+              "duration": 376193332
             }
           },
           {
@@ -947,18 +1028,23 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 136088084
+              "duration": 132540165
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@view-edit-employee",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
         "id": "view-and-edit-employee-details;user-cannot-view-any-employee-details-when-searched-with-non-existent-employee-id",
         "keyword": "Scenario",
-        "line": 17,
+        "line": 19,
         "name": "User cannot view any employee details when searched with non existent employee ID",
         "steps": [
           {
@@ -966,73 +1052,72 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 569436791
+              "duration": 567066459
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 18,
+            "line": 20,
             "name": "I open the OrangeHRM homepage",
             "match": {
               "location": "src/steps/Login.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1241395207
+              "duration": 747469291
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 19,
+            "line": 21,
             "name": "I login with valid credentials",
             "match": {
               "location": "src/steps/Login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2151572166
+              "duration": 1067894665
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 22,
             "name": "I open the PIM page",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1062359749
+              "duration": 1108241250
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
+            "line": 23,
             "name": "I search for the employee by ID",
             "match": {
               "location": "src/steps/CreateNewEmployee.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 882209916
+              "duration": 268667000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
+            "line": 24,
             "name": "the employee details cannot be fetched as the employee does not exist",
             "match": {
               "location": "src/steps/ViewEditEmployeeDetails.steps.ts:15"
             },
             "result": {
-              "status": "failed",
-              "duration": 10008928500,
-              "error_message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('.oxd-toast.oxd-toast--info')\nExpected string: \u001b[32m\"No Records Found\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - locator._expect with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.oxd-toast.oxd-toast--info')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/Shared/playwright-cucumber-project/node_modules/playwright/lib/matchers/expect.js:228:37)\n    at expectInfoToast (/Users/Shared/playwright-cucumber-project/src/utils/expectations.ts:8:25)\n    at ViewEditEmployeeDetailsPage.expectEmployeeDetailsNotFound (/Users/Shared/playwright-cucumber-project/src/pages/ViewEditEmployeeDetailsPage.ts:91:26)\n    at CustomWorld.<anonymous> (/Users/Shared/playwright-cucumber-project/src/steps/ViewEditEmployeeDetails.steps.ts:16:42)"
+              "status": "passed",
+              "duration": 884158540
             }
           },
           {
@@ -1040,19 +1125,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 134888334
+              "duration": 129693415
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@view-edit-employee",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "view-and-edit-employee-details",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "View and edit employee details",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@view-edit-employee",
+        "line": 1
+      }
+    ],
     "uri": "features/ViewEditEmployeeDetails.feature"
   }
 ]

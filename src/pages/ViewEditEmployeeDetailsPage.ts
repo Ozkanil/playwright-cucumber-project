@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { EMPLOYEE_DATA } from '../test-data/employee';
+import { EmployeeData } from '../utils/employeeHelper';
 import { expectSuccessToast, expectInfoToast } from '../utils/expectations';
 
 export class ViewEditEmployeeDetailsPage {
@@ -55,10 +55,10 @@ export class ViewEditEmployeeDetailsPage {
     await this.editEmployeeButton.click();
   }
 
-  async expectEmployeeDetailsDisplayed(): Promise<void> {
-    await expect(this.firstNameInput).toHaveValue(EMPLOYEE_DATA.firstName, { timeout: 15000 });
-    await expect(this.lastNameInput).toHaveValue(EMPLOYEE_DATA.lastName, { timeout: 15000 });
-    await expect(this.employeeIdInput).toHaveValue(EMPLOYEE_DATA.employeeId, { timeout: 15000 });
+  async expectEmployeeDetailsDisplayed(data: EmployeeData): Promise<void> {
+    await expect(this.firstNameInput).toHaveValue(data.firstName, { timeout: 15000 });
+    await expect(this.lastNameInput).toHaveValue(data.lastName, { timeout: 15000 });
+    await expect(this.employeeIdInput).toHaveValue(data.employeeId, { timeout: 15000 });
   }
 
   async editAndSaveEmployeeDetails(): Promise<void> {

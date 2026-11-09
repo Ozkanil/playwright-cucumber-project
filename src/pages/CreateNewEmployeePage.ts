@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { EMPLOYEE_DATA } from '../test-data/employee';
+import { EmployeeData } from '../utils/employeeHelper';
 import { expectSuccessToast, expectInfoToast } from '../utils/expectations';
 
 export class CreateNewEmployeePage {
@@ -50,7 +50,7 @@ export class CreateNewEmployeePage {
     await this.addButton.click();
   }
 
-  async fillEmployeeDetails(data = EMPLOYEE_DATA): Promise<void> {
+  async fillEmployeeDetails(data: EmployeeData): Promise<void> {
     await this.firstNameInput.fill(data.firstName);
     await this.lastNameInput.fill(data.lastName);
     await this.employeeIdInput.fill(data.employeeId);
@@ -60,30 +60,30 @@ export class CreateNewEmployeePage {
     await this.saveButton.click();
   }
 
-  async expectEmployeeCreated(): Promise<void> {
+  async expectEmployeeCreated(data: EmployeeData): Promise<void> {
     await expectSuccessToast(this.successToast, 'Saved');
     await expect(this.personalDetails).toBeVisible({ timeout: 10000 });
-    await expect(this.firstNameInput).toHaveValue(EMPLOYEE_DATA.firstName, { timeout: 10000 });
-    await expect(this.lastNameInput).toHaveValue(EMPLOYEE_DATA.lastName, { timeout: 10000 });
-    await expect(this.employeeIdInput).toHaveValue(EMPLOYEE_DATA.employeeId, { timeout: 10000 });
+    await expect(this.firstNameInput).toHaveValue(data.firstName, { timeout: 10000 });
+    await expect(this.lastNameInput).toHaveValue(data.lastName, { timeout: 10000 });
+    await expect(this.employeeIdInput).toHaveValue(data.employeeId, { timeout: 10000 });
   }
 
-  async searchEmployeeById(): Promise<void> {
-    await this.employeeSearchInput.fill(EMPLOYEE_DATA.employeeId);
+  async searchEmployeeById(employeeId: string): Promise<void> {
+    await this.employeeSearchInput.fill(employeeId);
     await this.searchButton.click();
   }
 
-  async expectEmployeeFoundInResults(): Promise<void> {
-    const employeeRow = this.employeeTableResultRow.filter({ hasText: EMPLOYEE_DATA.employeeId }).first();
+  async expectEmployeeFoundInResults(data: EmployeeData): Promise<void> {
+    const employeeRow = this.employeeTableResultRow.filter({ hasText: data.employeeId }).first();
 
     await expect(employeeRow).toBeVisible({ timeout: 15000 });
-    await expect(employeeRow).toContainText(EMPLOYEE_DATA.employeeId, { timeout: 15000 });
-    await expect(employeeRow).toContainText(EMPLOYEE_DATA.firstName, { timeout: 15000 });
-    await expect(employeeRow).toContainText(EMPLOYEE_DATA.lastName, { timeout: 15000 });
+    await expect(employeeRow).toContainText(data.employeeId, { timeout: 15000 });
+    await expect(employeeRow).toContainText(data.firstName, { timeout: 15000 });
+    await expect(employeeRow).toContainText(data.lastName, { timeout: 15000 });
   }
 
-  async clickFoundEmployeeToViewTheDetails(): Promise<void> {
-    const employeeRow = this.employeeTableResultRow.filter({ hasText: EMPLOYEE_DATA.employeeId }).first();
+  async clickFoundEmployeeToViewTheDetails(employeeId: string): Promise<void> {
+    const employeeRow = this.employeeTableResultRow.filter({ hasText: employeeId }).first();
     await employeeRow.click();
   }
 

@@ -1,10 +1,10 @@
 import { Then, When } from '@cucumber/cucumber';
 
 Then('the employee details should be displayed', async function (this: any) {
-  await this.viewEditEmployeeDetailsPage.expectEmployeeDetailsDisplayed();
+  await this.viewEditEmployeeDetailsPage.expectEmployeeDetailsDisplayed(this.employeeData);
 });
 
-When('I edit and save the employee details', async function (this: any) {
+When('I edit and save the employee first name last name and marital status', async function (this: any) {
   await this.viewEditEmployeeDetailsPage.editAndSaveEmployeeDetails();
 });
 

@@ -6,6 +6,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { CreateNewEmployeePage } from '../pages/CreateNewEmployeePage';
 import { ViewEditEmployeeDetailsPage } from '../pages/ViewEditEmployeeDetailsPage';
 import { DeleteEmployeePage } from '../pages/DeleteEmployeePage';
+import { EmployeeData, generateEmployeeData } from '../utils/employeeHelper';
 
 const screenshotDir = path.join(process.cwd(), 'reports', 'screenshots');
 
@@ -13,6 +14,7 @@ export class CustomWorld extends World {
   browser!: Browser;
   context!: BrowserContext;
   page!: Page;
+  employeeData!: EmployeeData;
   loginPage!: LoginPage;
   declare employeePage: CreateNewEmployeePage;
   declare viewEditEmployeeDetailsPage: ViewEditEmployeeDetailsPage;
@@ -23,7 +25,7 @@ export class CustomWorld extends World {
   }
 
   async openBrowser() {
-    this.browser = await chromium.launch({ headless: false, slowMo: 400 });
+    this.browser = await chromium.launch({ headless: false, slowMo: 0 });
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
     this.loginPage = new LoginPage(this.page);
@@ -43,6 +45,7 @@ setDefaultTimeout(30000);
 
 Before(async function (this: CustomWorld) {
   await this.openBrowser();
+  this.employeeData = generateEmployeeData();
 });
 
 After(async function (this: CustomWorld, scenario) {

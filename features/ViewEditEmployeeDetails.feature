@@ -8,11 +8,12 @@ Feature: View and edit employee details
     And I click the Add button
     And I fill in employee details
     And I save the employee details
+    And the employee should be created
     And I open the PIM page
     And I search for the employee by ID
     When I click on the found employee to view details
     Then the employee details should be displayed
-    When I edit and save the employee details
+    When I edit and save the employee first name last name and marital status
     Then the employee details should be updated successfully
 
   Scenario: User cannot view any employee details when searched with non existent employee ID

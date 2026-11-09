@@ -6,7 +6,7 @@ Feature: Login
     When I login with valid credentials
     Then the page should show Dashboard
 
-  Scenario Outline: Login with invalid credentials
+  Scenario Outline: Login with invalid credentials fails
     Given I open the OrangeHRM homepage
     When I login with "<username>" and "<password>"
     Then I should see the error message "<message>"
@@ -17,7 +17,7 @@ Feature: Login
       | Admin         | wrongpass   | Invalid credentials            |
       | wronguser     | admin123    | Invalid credentials            |
 
-  Scenario Outline: Login with missing username or password
+  Scenario Outline: Login with missing username or password fails
     Given I open the OrangeHRM homepage
     When I login with "<username>" and "<password>"
     Then I should see the required message for "<field>"
