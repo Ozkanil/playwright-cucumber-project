@@ -97,6 +97,10 @@ This keeps locators and interactions organized and easier to maintain.
 
 ## How to run tests
 
+From VS Code: 
+
+The tests can be executed in a batch or selectively using the Explorer. For this feature to be enabled "Cucumber JS Test Runner" extension needs to be installed.
+
 From the project root:
 
 ```bash
@@ -207,4 +211,3 @@ fs.mkdirSync(screenshotDir, { recursive: true });
 ```
 
 The screenshot name is based on the scenario name for easier debugging.
-
